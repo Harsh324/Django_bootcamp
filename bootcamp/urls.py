@@ -19,11 +19,13 @@ from django.urls import path
 from products.views import (
     home_view,
     product_detail_view,
+    product_list_view,
 )
 
 
 urlpatterns = [
     path('search/', home_view),
+    path('products/', product_list_view),
     path('products/<int:id>/', product_detail_view),
     #path('products/1/', views.product_detail_view),
     path('admin/', admin.site.urls),
